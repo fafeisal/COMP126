@@ -1,0 +1,163 @@
+/*imported google font*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap");
+
+/*Formatting for all body - set up grid display*/
+body {
+    display: grid;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/*Heading portion of website with svg and title*/
+header {
+    display: flex;
+    height: 25vh;
+    background-color: rgb(134, 36, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+/*Design for svg in header*/
+.svg {
+    margin: 2rem;
+}
+
+/*Design for the text in header*/
+.header-txt {
+    margin: 0 auto 0 0;
+    padding: 1rem;
+    text-align: center;
+    color: white; 
+}
+
+/*Navigation menu overall layout*/
+nav {
+    height: 10vh;
+    display: flex;
+    margin: 1rem auto 0 auto;
+    justify-content: space-around;
+}
+
+/*Class for all nav btns*/
+.nav-item {
+    margin: 0 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: rgb(0, 0, 0);
+    background-color: orange;
+    text-decoration: none;
+    transition: 0s;
+}
+
+/*Slow color change transition for hover action*/
+.nav-item:hover, .nav-item:focus {
+    transition: 0.5s ease-in;
+    background-color: rgb(255, 238, 0);
+}
+
+/*Large section for form*/
+section {
+    height: 50vh;
+}
+
+/*styling for form*/
+form {
+    margin: 0 auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    width: 90%;
+}
+ 
+/*Design for input and text in the form*/
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(141, 0, 0, 0.1);
+    border: 0.2rem solid transparent;
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(255, 255, 204);
+    box-shadow: rgba(0, 0, 0, 0.1) inset;
+    transition: 0s linear;
+}
+ 
+/*design for input field color change on form*/
+input:focus, input:active, textarea:focus, textarea:active {
+    border: 0.2rem solid orangered;
+}
+
+/*Design for one and only fieldset for form*/
+fieldset {
+    margin: 0.3rem;
+    border: none;
+}
+
+/*Design for submit btn*/
+button {
+    margin: 0 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: rgb(0, 0, 0);
+    width: 90%;
+    text-align: center;
+    border: none;
+    background: linear-gradient(to right, orange, yellow, yellow, yellow);
+    background-size: 200%, 200%;
+    background-position: 0% 50%;
+    transition: background-position 1s ease-in-out;
+}
+
+/*Slow color change animation for hover action*/
+button:hover, button:focus, button:active {
+    background-position: 50% 100%;
+    transition: background-position 1s ease-in-out;
+}
+
+/*Footer area for website*/
+footer {
+    height: 15vh;
+    display: flex;
+    background-color:rgb(134, 36, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+/*Design for footer text*/
+.footer-txt {
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+/*Media query to transition to desktop*/
+@media screen and (min-width: 900px){
+    body {
+        grid-template-columns: 5;
+    }
+
+    header {
+        grid-column: 1/6;
+    }
+
+    nav {
+        grid-column: 1/2;
+        height: 50vh;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item {
+        margin: 3rem;
+    }
+
+    section {
+        grid-column: 2/6;
+    }
+
+    footer {
+        grid-column: 1/6;
+    }
+}
